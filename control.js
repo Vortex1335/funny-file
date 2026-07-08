@@ -1,3 +1,3 @@
 var virusKillSwitch = false; //disabled
 localStorage.removeItem("virusKillSwitch");
-localStorage.setItem("virusKillSwitch", "false");
+localStorage.setItem("virusKillSwitch", virusKillSwitch);
