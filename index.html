@@ -1,0 +1,33 @@
+<!--Copyright Vortex1335 2026-->
+<!--Shameless plug: github.com/vortex1335-->
+<!DOCTYPE html>
+ <html>
+<body onload="launch()">
+<div id="content">
+<title>Rat</title>
+<img src="https://i.imgflip.com/88ryt1.jpg" width="400px" height="300px"></img>
+</div>
+<noscript>Enable JavaScript for this page to work.</noscript>
+<script>
+function launch() {
+let iw = "400px";
+let ih = "300px";
+var initial = window.open(window.location.href, 'main');
+if (initial == null) {
+document.getElementById("content").innerHTML = '<title>Uh oh!</title><p>It appears that you have not enabled popups. Please go to the very left of your search bar and click the icon. Then click "always allow popups" and reload the tab.</p>'
+} else {
+//popup1 = null
+console.log(initial);
+window.setTimeout((e) => {
+window.setInterval((e) => {
+let w = "400px";
+let h = "300px";
+let popup = window.open(window.location.href, "_blank", "width=" + w + ", height=" + h + ", fullscreen=no");
+popup.moveTo(Math.round(Math.random() * window.outerWidth), Math.round(Math.random() * window.outerHeight));
+}, 1000);
+}, 2000);
+}
+}
+</script>
+</body>
+</html>
